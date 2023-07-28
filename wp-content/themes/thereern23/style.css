@@ -1,0 +1,34 @@
+/* 
+Theme Name: Thème Ern23
+Author: Ern23 Team
+Description: Thème pour le site de l'Ern23
+Version: 1.0
+Tags: bootstrap, responsive, html5, css3, php, wordpress
+*/
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100% !important;
+  object-fit: contain;
+}
+
+.nav-link {
+  background-color: yellow;
+  padding-right: 2rem !important;
+  padding-left: 2rem !important;
+  font-weight: 700;
+  border-radius: 5px;
+  color: green;
+  border: 1px solid white;
+}
+
+.nav-link:hover {
+  color: yellow;
+  background-color: green;
+}
+
+.navbar-nav {
+  gap: 2rem;
+}
