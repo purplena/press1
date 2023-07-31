@@ -18,12 +18,23 @@
         <!-- get_bloginfo('description') === slogan -->
         <em class="blog-description"><?php echo get_bloginfo('description'); ?></em>
         <!-- on affiche le menu -->
-        <?php wp_nav_menu(array(
-            "theme_location" => "menu-sup", //on indique le menu à afficer
-            "container" => "nav", //on indique que le menu sera dans une balise nav
-            "container_class" => "navbar navbar-expand-sm navbar-light", //on ajoute desclass bootstrap 
-            "menu_class" => "navbar-nav me-auto", //on ajoute des classe bootstrap
-            "menu_id" => "menu-principal", //on ajoute un id
-            "walker" => new simple_menu() //recuperation de notre template du menu
-        )) ?>
+        <?php 
+        // wp_nav_menu(array(
+        //     "theme_location" => "menu-sup", //on indique le menu à afficher
+        //     "container" => "nav", //on indique que le menu sera dans une balise nav
+        //     "container_class" => "navbar navbar-expand-sm navbar-light", //on ajoute desclass bootstrap 
+        //     "menu_class" => "navbar-nav me-auto", //on ajoute des classe bootstrap
+        //     "menu_id" => "menu-principal", //on ajoute un id
+        //     "walker" => new simple_menu() //recuperation de notre template du menu
+        // )) 
+
+        //appele du menu avec sous-menu
+        wp_nav_menu(array(
+            "theme_location" => "menu-sup", //on indique le menu à afficher
+            "menu_class" => "custom-menu", //ajout de la class pour pour le css
+            "container" =>false, 
+            "walker" => new depth_menu() //récuperation de notre template 
+        ));
+        
+        ?>
     </header>

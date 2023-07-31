@@ -43,7 +43,7 @@ class simple_menu extends Walker_Nav_Menu {
 
         //2. on construit le template
         $output .= "<div class='nav-item custom-nav-item'>";
-        $output .= "<a class='nav-link' href='$permalink'>";
+        $output .= '<a class="nav-link" href="$permalink">';
         $output .= $title;
         $output .= "</a>"; 
     }
@@ -55,4 +55,89 @@ class simple_menu extends Walker_Nav_Menu {
     }
 }
 
+//on design un menu qui gère les sous-menus
+class depth_menu extends Walker_Nav_Menu {
+    //fonction pour démarrer le niveau de menu
+    public function start_lvl(&$output, $depth = 0, $args = null)
+    {
+        $output .= "<ul class = 'sub-menu'>"; //on ouvre une ul
+    }
+
+    public function start_el(&$output, $data_object, $depth = 0, $args = null, $current_object_id = 0)
+    {
+        //on récupère les titres
+        $title = $data_object->title;
+        //on récupère les liens
+        $permalink = $data_object->url;
+        // on gère l'indentation des liens
+        //signification de "\t" (hex 09) = tabulation
+        // $indentation = str_repeat("\t", $depth);
+        //les classes css à ajouter
+        $classes = empty($data_object->classes) ? array() : (array) $data_object->classes;
+        $class_name = join(' ', apply_filters('nav_menu_css_array', array_filter($classes), $data_object));
+
+        if($depth > 0) {
+            // $output .= $indentation . '<li class="' . esc_attr($class_name) . '">';
+            $output .= '<li class="' . esc_attr($class_name) . '">';
+        } else {
+            $output .= '<li class="' . esc_attr($class_name) . '">';
+        }
+        $output .= '<a href="' . $permalink . '">' . $title . '</a>';
+    }
+
+    public function end_el(&$output, $data_object, $depth = 0, $args = null)
+    {
+        // on ferme li
+        $output .= "</li>";
+    }
+    
+    public function end_lvl(&$output, $depth = 0, $args = null)
+    {
+        // on ferme ma ul 
+        $output .= "</ul>"; 
+    }
+}
+
+// shortcode
+// 1er exemple : shortcode sans paramètres
+function monShortCode() {
+    // on retourne le shortcode que l'on souhaite afficher
+    return "<div class='alert alert-success'>Mon super shortcode</div>";
+}
+// on ajoute le shortcode à notre thème
+add_shortcode('monMonShort', 'monShortCode');
+
+
+
+function monShortPromo($atts) {
+    // on va déclarer une variable ici $a
+    // on utilise la fonction WP 'shortcut_atts()' pour attribuer une valeur par défault à notre paramètre
+    // OPTION
+    // $a = shortcode_atts(array(
+    //     'percent' => 10
+    // ), $atts);
+    $a = shortcode_atts(['percent' => 10], $atts);
+    return "<div class='alert alert-success'>Promo de {$a['percent']} %</div>";
+}
+
+add_shortcode('promo', 'monShortPromo');
+
+
+// WIDGET
+// fonction pour enregistrer le widget
+function register_custom_widget_area() {
+    register_sidebar(
+        array(
+            'id' => 'new-widget-area',
+            'name' => __('New Widget Area'),
+            'description' => __('Widget area for the sidebar'),
+            'before_widget' => '<div class="widget-content">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>'
+        )
+    );
+}
+//initialisation du widget
+add_action('widgets_init', 'register_custom_widget_area');
 ?>
