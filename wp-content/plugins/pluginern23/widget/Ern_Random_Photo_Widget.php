@@ -58,7 +58,7 @@ class Ern_Random_Photo_Widget extends WP_Widget
     }
     // creaation de lafonction update pour modifier les valeurs
     // du formulaire et générer d'autre images
-    public function pdate($new_instance, $old_instance) {
+    public function update($new_instance, $old_instance) {
         $instance = $old_instance;
         $instance['query'] = sanitize_text_field($new_instance['query']);
         $instance['nbr'] = sanitize_text_field($new_instance['nbr']);

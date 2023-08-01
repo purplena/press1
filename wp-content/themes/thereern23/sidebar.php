@@ -33,5 +33,12 @@
         <p>
             <?php wp_get_archives('type=monthly') ?>
         </p>
+        <?php 
+        // affichage du widget dans le sidebar (le blade)
+        if(is_active_sidebar('new-widget-area')) :?>
+        <div id="secondary-sidebar" class="new-widget-area">
+            <?php dynamic_sidebar("new-widget-area"); ?>
+        </div>
+        <?php endif; ?>
     </div>
 </div>
