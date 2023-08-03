@@ -1,0 +1,84 @@
+2023-08-03T09:20:23+00:00 CRITICAL Uncaught Error: Call to a member function get_title() on string in /app/wp-content/themes/boutiqueern23/single.php:22
+Stack trace:
+#0 /app/wp-includes/template-loader.php(106): include()
+#1 /app/wp-blog-header.php(19): require_once('/app/wp-include...')
+#2 /app/index.php(17): require('/app/wp-blog-he...')
+#3 {main}
+  thrown in /app/wp-content/themes/boutiqueern23/single.php on line 22
+
+2023-08-03T09:20:33+00:00 CRITICAL Uncaught Error: Call to a member function get_title() on string in /app/wp-content/themes/boutiqueern23/single.php:22
+Stack trace:
+#0 /app/wp-includes/template-loader.php(106): include()
+#1 /app/wp-blog-header.php(19): require_once('/app/wp-include...')
+#2 /app/index.php(17): require('/app/wp-blog-he...')
+#3 {main}
+  thrown in /app/wp-content/themes/boutiqueern23/single.php on line 22
+
+2023-08-03T09:20:34+00:00 CRITICAL Uncaught Error: Call to a member function get_title() on string in /app/wp-content/themes/boutiqueern23/single.php:22
+Stack trace:
+#0 /app/wp-includes/template-loader.php(106): include()
+#1 /app/wp-blog-header.php(19): require_once('/app/wp-include...')
+#2 /app/index.php(17): require('/app/wp-blog-he...')
+#3 {main}
+  thrown in /app/wp-content/themes/boutiqueern23/single.php on line 22
+
+2023-08-03T09:21:08+00:00 CRITICAL Uncaught Error: Call to a member function get_title() on string in /app/wp-content/themes/boutiqueern23/single.php:23
+Stack trace:
+#0 /app/wp-includes/template-loader.php(106): include()
+#1 /app/wp-blog-header.php(19): require_once('/app/wp-include...')
+#2 /app/index.php(17): require('/app/wp-blog-he...')
+#3 {main}
+  thrown in /app/wp-content/themes/boutiqueern23/single.php on line 23
+
+2023-08-03T09:21:08+00:00 CRITICAL Uncaught Error: Call to a member function get_title() on string in /app/wp-content/themes/boutiqueern23/single.php:23
+Stack trace:
+#0 /app/wp-includes/template-loader.php(106): include()
+#1 /app/wp-blog-header.php(19): require_once('/app/wp-include...')
+#2 /app/index.php(17): require('/app/wp-blog-he...')
+#3 {main}
+  thrown in /app/wp-content/themes/boutiqueern23/single.php on line 23
+
+2023-08-03T09:21:10+00:00 CRITICAL Uncaught Error: Call to a member function get_title() on string in /app/wp-content/themes/boutiqueern23/single.php:23
+Stack trace:
+#0 /app/wp-includes/template-loader.php(106): include()
+#1 /app/wp-blog-header.php(19): require_once('/app/wp-include...')
+#2 /app/index.php(17): require('/app/wp-blog-he...')
+#3 {main}
+  thrown in /app/wp-content/themes/boutiqueern23/single.php on line 23
+
+2023-08-03T09:23:13+00:00 CRITICAL Uncaught Error: Call to a member function get_title() on string in /app/wp-content/themes/boutiqueern23/single.php:23
+Stack trace:
+#0 /app/wp-includes/template-loader.php(106): include()
+#1 /app/wp-blog-header.php(19): require_once('/app/wp-include...')
+#2 /app/index.php(17): require('/app/wp-blog-he...')
+#3 {main}
+  thrown in /app/wp-content/themes/boutiqueern23/single.php on line 23
+
+2023-08-03T09:23:22+00:00 CRITICAL Uncaught Error: Call to a member function title() on string in /app/wp-content/themes/boutiqueern23/single.php:23
+Stack trace:
+#0 /app/wp-includes/template-loader.php(106): include()
+#1 /app/wp-blog-header.php(19): require_once('/app/wp-include...')
+#2 /app/index.php(17): require('/app/wp-blog-he...')
+#3 {main}
+  thrown in /app/wp-content/themes/boutiqueern23/single.php on line 23
+
+2023-08-03T09:24:26+00:00 CRITICAL Uncaught Error: Call to a member function title() on string in /app/wp-content/themes/boutiqueern23/single.php:23
+Stack trace:
+#0 /app/wp-includes/template-loader.php(106): include()
+#1 /app/wp-blog-header.php(19): require_once('/app/wp-include...')
+#2 /app/index.php(17): require('/app/wp-blog-he...')
+#3 {main}
+  thrown in /app/wp-content/themes/boutiqueern23/single.php on line 23
+
+2023-08-03T09:35:02+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /app/wp-content/themes/boutiqueern23/single.php:25
+Stack trace:
+#0 /app/wp-includes/template-loader.php(106): include()
+#1 /app/wp-blog-header.php(19): require_once('/app/wp-include...')
+#2 /app/index.php(17): require('/app/wp-blog-he...')
+#3 {main}
+  thrown in /app/wp-content/themes/boutiqueern23/single.php on line 25
+
+2023-08-03T09:43:46+00:00 CRITICAL syntax error, unexpected ''image_url'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /app/wp-content/themes/boutiqueern23/single.php on line 32
+
+2023-08-03T10:03:15+00:00 CRITICAL syntax error, unexpected end of file in /app/wp-content/themes/boutiqueern23/single.php on line 86
+
